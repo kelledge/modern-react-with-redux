@@ -11,7 +11,6 @@ export default class OpenWeatherMapApi {
   search(city, country = 'us') {
     const url = BASE_URL + city + "," + country + "&appid=" + this.apiKey;
     const req = axios.get(url);
-    req.then((res) => {console.log(res)});
 
     return req;
   }
